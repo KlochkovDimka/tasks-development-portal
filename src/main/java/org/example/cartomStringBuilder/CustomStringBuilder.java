@@ -6,7 +6,7 @@ public class CustomStringBuilder {
 
     public void append(String text) {
         if (creator.getList() != null) {
-            creator.save(creator.getList().getLast().getValue() + text);
+            creator.save(creator.toString() + text);
         } else {
             creator.save(text);
         }

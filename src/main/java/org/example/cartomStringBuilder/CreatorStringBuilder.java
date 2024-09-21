@@ -1,10 +1,10 @@
 package org.example.cartomStringBuilder;
 
-import java.util.LinkedList;
+import java.util.Stack;
 
 public class CreatorStringBuilder {
 
-    private final LinkedList<MementoStringBuilder> list = new LinkedList<>();
+    private final Stack<MementoStringBuilder> list = new Stack<>();
 
     public CreatorStringBuilder() {
     }
@@ -15,16 +15,16 @@ public class CreatorStringBuilder {
 
     public void removeLast() {
         if (!list.isEmpty()) {
-            list.removeLast();
+            list.remove(list.size() - 1);
         }
     }
 
-    public LinkedList<MementoStringBuilder> getList() {
+    public Stack<MementoStringBuilder> getList() {
         return list.isEmpty() ? null : list;
     }
 
     @Override
     public String toString() {
-        return list.getLast().getValue();
+        return list.get(list.size() - 1).getValue();
     }
 }
