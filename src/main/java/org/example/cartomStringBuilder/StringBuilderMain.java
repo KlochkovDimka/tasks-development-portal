@@ -1,8 +1,6 @@
-package org.example;
+package org.example.cartomStringBuilder;
 
-import org.example.cartomStringBuilder.CustomStringBuilder;
-
-public class Main {
+public class StringBuilderMain {
     public static void main(String[] args) {
         CustomStringBuilder builder = new CustomStringBuilder();
 
